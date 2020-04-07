@@ -21,19 +21,21 @@
         <h1>Quiz Nes</h1>
       </header>
 
-      <div class="quiz">
-        <div class="cheios">
-          <i v-for="vida in vidas" class="nes-icon is-medium heart"></i>
-        </div>
-        <div class="vazios">
-          <i class="nes-icon is-medium heart is-empty"></i>
-          <i class="nes-icon is-medium heart is-empty"></i>
-          <i class="nes-icon is-medium heart is-empty"></i>
+      <div v-show="vidas > 0" class="quiz">
+        <div class="vidas">
+          <div class="cheios">
+            <i v-for="vida in vidas" class="nes-icon is-medium heart"></i>
+          </div>
+          <div class="vazios">
+            <i class="nes-icon is-medium heart is-empty"></i>
+            <i class="nes-icon is-medium heart is-empty"></i>
+            <i class="nes-icon is-medium heart is-empty"></i>
+          </div>
         </div>
 
         <div class="nes-container with-title is-centered">
           <p class="title">{{pergunta.pergunta}}</p>
-          <div class="perguntas">
+          <div v-show="indice < 4" class="perguntas">
             <label>
               <input
                 value="1"
@@ -94,14 +96,18 @@
           </button>
         </div>
       </div>
+      <div v-show="indice === 4" class="gameOver">
+        <button @click="gameOver" type="button" class="nes-btn is-primary">
+          Jogar Novamente
+        </button>
+      </div>
 
-      <div v-show="vidas === -1" class="gameOver">
+      <div v-show="vidas === 0" class="gameOver">
         <h1 class="nes-text is-error">Game Over</h1>
         <button @click="gameOver" type="button" class="nes-btn is-error">
           Tentar Novamente
         </button>
       </div>
-      {{vidas}}{{indice}}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

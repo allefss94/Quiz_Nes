@@ -9,7 +9,7 @@
   },
   {
     "pergunta": "Qual é o inimigo do Mario",
-    "opcao1": "Koppa",
+    "opcao1": "Bowser",
     "opcao2": "Ghost",
     "opcao3": "Esqueleto",
     "certa": 1,
@@ -30,6 +30,15 @@
     "opcao3": "Jãozinho",
     "certa": 2,
     "dica": "É igual ao nome do botão que te direciona pra outra página"
+    
+  },
+  {
+    "pergunta": "Qual foi o melhor TopGear",
+    "opcao1": "3000",
+    "opcao2": "GT",
+    "opcao3": "TopGear",
+    "certa": 1,
+    "dica": "É numerica a resposta correta!"
     
   },
   {
