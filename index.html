@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Nes</title>
+    <link
+      href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <header>
+        <h1>Quiz Nes</h1>
+      </header>
+
+      <div class="quiz">
+        <div class="cheios">
+          <i v-for="vida in vidas" class="nes-icon is-medium heart"></i>
+        </div>
+        <div class="vazios">
+          <i class="nes-icon is-medium heart is-empty"></i>
+          <i class="nes-icon is-medium heart is-empty"></i>
+          <i class="nes-icon is-medium heart is-empty"></i>
+        </div>
+
+        <div class="nes-container with-title is-centered">
+          <p class="title">{{pergunta.pergunta}}</p>
+          <div class="perguntas">
+            <label>
+              <input
+                value="1"
+                v-model="selecionado"
+                type="radio"
+                class="nes-radio"
+                name="answer"
+              />
+              <span>{{pergunta.opcao1}}</span>
+            </label>
+            <label>
+              <input
+                value="2"
+                v-model="selecionado"
+                type="radio"
+                class="nes-radio"
+                name="answer"
+              />
+              <span>{{pergunta.opcao2}}</span>
+            </label>
+            <label>
+              <input
+                value="3"
+                v-model="selecionado"
+                type="radio"
+                class="nes-radio"
+                name="answer"
+              />
+              <span>{{pergunta.opcao3}}</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="menu">
+          <button
+            type="button"
+            class="nes-btn is-warning"
+            onclick="document.getElementById('dialog-default').showModal();"
+          >
+            ?
+          </button>
+          <dialog class="nes-dialog" id="dialog-default">
+            <form method="dialog">
+              <p class="title">Dica:</p>
+              <p>{{pergunta.dica}}</p>
+              <menu class="dialog-menu">
+                <button class="nes-btn is-success">Fechar</button>
+              </menu>
+            </form>
+          </dialog>
+          <button
+            @click="enviarResposta "
+            type="button"
+            class="nes-btn is-success"
+            v-show="selecionado > 0"
+          >
+            >
+          </button>
+        </div>
+      </div>
+
+      <div v-show="vidas === -1" class="gameOver">
+        <h1 class="nes-text is-error">Game Over</h1>
+        <button @click="gameOver" type="button" class="nes-btn is-error">
+          Tentar Novamente
+        </button>
+      </div>
+      {{vidas}}{{indice}}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js
+    "></script>
+  </body>
+</html>

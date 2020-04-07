@@ -1,0 +1,40 @@
+[
+  {
+    "pergunta": "Qual o nome do irmão do Mario",
+    "opcao1": "Raul",
+    "opcao2": "Luigi",
+    "opcao3": "Carlos",
+    "certa": 2,
+    "dica": "Parece com Luiz"
+  },
+  {
+    "pergunta": "Qual é o inimigo do Mario",
+    "opcao1": "Koppa",
+    "opcao2": "Ghost",
+    "opcao3": "Esqueleto",
+    "certa": 1,
+    "dica": "Tem o mesmo nome de onde se guarda os alimentos, anexo a cozinha."
+  },
+  {
+    "pergunta": "Qual o nome do mascote do Mario",
+    "opcao1": "Yoshi",
+    "opcao2": "Cavalinho",
+    "opcao3": "Sapo",
+    "certa": 1,
+    "dica": "Essa não tem como errar"
+  },
+  {
+    "pergunta": "O nome do protagonista em The Legend of Zelda - Ocarine of Time é:",
+    "opcao1": "Zelda",
+    "opcao2": "Link",
+    "opcao3": "Jãozinho",
+    "certa": 2,
+    "dica": "É igual ao nome do botão que te direciona pra outra página"
+    
+  },
+  {
+    "pergunta": "Parabéns você concluiu o quiz.",
+    "dica": "Tente novamente."
+    
+  }
+ ]
